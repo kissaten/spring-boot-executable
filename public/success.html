@@ -51,7 +51,7 @@
               <input type="text" placeholder="Email" class="form-control">
             </div>
             <div class="form-group">
-              <input type="text" placeholder="Password" class="form-control">
+              <input type="password" placeholder="Password" class="form-control">
             </div>
             <button type="submit" class="btn btn-success">Sign in</button>
           </form>
@@ -63,45 +63,7 @@
     <div class="jumbotron">
       <div class="container">
         <div class="wrapper">
-        <h2>Create a New Appointment</h2>
-          <form class="form-horizontal">
-            <div class="form-group">
-                <label for="inputEmail" class="control-label col-xs-4">Invitee Name</label>
-                <div class="col-xs-8">
-                   <input type="text" class="form-control" id="inputName" placeholder="Name">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputEmail" class="control-label col-xs-4">Invitee Email</label>
-                <div class="col-xs-8">
-                   <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputPhone" class="control-label col-xs-4">Invitee Phone</label>
-                <div class="col-xs-8">
-                   <input type="text" class="form-control" id="inputPhone" placeholder="___-___-____">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputDate" class="control-label col-xs-4">Appt. Date</label>
-                <div class="col-xs-8">
-                   <input type="text" class="form-control" id="inputDate" placeholder="mm/dd/yyyy">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-xs-offset-2 col-xs-10">
-                    <div class="checkbox">
-                        <label><input id="inputSms" type="checkbox"> Send SMS Reminder</label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-xs-offset-2 col-xs-10">
-                    <button id="submitBtn" type="button" class="btn btn-primary">Create</button>
-                </div>
-            </div>
-          </form>
+        <h2>Success!</h2>
         </div>
       </div>
     </div>
@@ -115,20 +77,6 @@
         <p>&copy; Company 2014</p>
       </footer>
     </div> <!-- /container -->
-
-    <script>
-      $( "#submitBtn" ).click(function() {
-        var inviteeName = $('#inputName').val();
-        var inviteeEmail = $('#inputEmail').val();
-        var inviteePhone = $('#inputPhone').val();
-        var apptDate = $('#inputDate').val();
-        var sendSms = $('#inputSms').is(':checked');
-
-        $.post( "submit/", { name : inviteeName, email : inviteeEmail, phone : inviteePhone, date : apptDate, send_sms : sendSms }, function( data ) {
-          window.location = "success.html";
-        });
-      });
-    </script>
 
   </body>
 </html>
