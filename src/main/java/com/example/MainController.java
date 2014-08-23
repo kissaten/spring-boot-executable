@@ -16,10 +16,9 @@ import java.util.*;
 @EnableAutoConfiguration
 public class MainController {
 
-  @RequestMapping("/")
-  @ResponseBody
-  String home() {
-      return "Hello World!";
+  @RequestMapping("/home")
+    String home() {
+    return "home";
   }
 
   @RequestMapping(value="/submit/", method = RequestMethod.POST)
