@@ -17,7 +17,12 @@ import java.util.*;
 public class MainController {
 
   @RequestMapping("/home")
-    String home() {
+  String home() {
+    try {
+      Thread.sleep(61000);
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
     return "home";
   }
 
