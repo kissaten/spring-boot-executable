@@ -24,11 +24,6 @@
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-actuator</artifactId>
       </dependency>
-      <dependency>
-        <groupId>postgresql</groupId>
-        <artifactId>postgresql</artifactId>
-        <version>9.0-801.jdbc4</version>
-      </dependency>
   </dependencies>
 
   <properties>
